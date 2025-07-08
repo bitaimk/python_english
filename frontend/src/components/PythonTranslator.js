@@ -51,6 +51,8 @@ const PythonTranslator = () => {
       return;
     }
 
+    streamingRef.current = true;
+
     // Find matching mock translation or use a default
     const mockTranslation = mockTranslations.find(mock => 
       input.toLowerCase().includes(mock.trigger.toLowerCase())
