@@ -74,6 +74,7 @@ def solution():
 
   const handleStop = () => {
     setIsStreaming(false);
+    streamingRef.current = false;
   };
 
   const copyToClipboard = async () => {
