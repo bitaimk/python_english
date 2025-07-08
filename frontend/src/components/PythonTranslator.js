@@ -32,7 +32,7 @@ const PythonTranslator = () => {
     
     // Simulate streaming by adding characters one by one
     for (let i = 0; i <= text.length; i++) {
-      if (!isStreaming) break;
+      if (!streamingRef.current) break;
       
       await new Promise(resolve => setTimeout(resolve, 20));
       setOutput(text.slice(0, i));
